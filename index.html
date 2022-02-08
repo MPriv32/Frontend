@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    
+    <script>
+function visit_count() {
+    fetch("https://yl0ddssmig.execute-api.us-west-1.amazonaws.com/crc/%7Bproxy+%7D")
+        .then(response => response.json())
+        .then(data => document.getElementById('Visit_Count').innerHTML = `Visits: ${data}`)
+        .catch(err => console.log(err));
+}
+
+window.onload=visit_count()
+    </script>
+
+    <title>Mitchell's Resume</title>
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="left_container">
+        <div class="profile">
+                <img class="profile-pic" src="profile.jpg">
+                <div class="name">
+                    <h1 class="first-name">MITCHELL</h1>
+                    <h1 class="last-name">PRIVETT</h1>
+                </div>
+                <div class="role">
+                    <h2 class="job_role">CLOUD ENGINEER</h2>
+                </div>
+                
+        </div>
+        <div class="under_column_left">
+            <div class="contact_info">
+                <h3 class="contact">CONTACT INFO</h3>
+            </div>
+            <div class="location">Corona, CA</div>
+            <div class="email">LAHC33@gmail.com</div>
+            <div class="phone">(951) 212-5253</div>
+            <div class="linkedin"> 
+                <a href="https://www.linkedin.com/in/mitchell-privett"> LinkedIn</a>
+            </div>
+            <div class="skills">
+                <div class="skills_head">
+                    <h2>SKILLS</h2>
+                </div>
+            <div class="skills_left">
+                <ul>
+                    <li>AWS</li>
+                    <li>Terraform</li>
+                    <li>Python</li>
+                    <li>Javascript</li>
+                </ul>
+            </div>
+            <div class="skills_right">
+                <ul>
+                    <li>CI/CD</li>
+                    <li>Git/GitHub</li>
+                    <li>HTML/CSS</li>
+                    <li>Bash</li>
+                </ul>
+            </div>
+            </div>
+            <div class="certs">
+                <div class="certs_head">
+                    <h2>CERTIFICATIONS</h2>
+                </div>
+                <ul>
+                    <li>AWS Solutions Architect-Associate (c02)</li>
+                    <br>
+                    <li>CompTIA Network+</li>
+                    <br>
+                    <li>CompTIA A+</li>
+                    <br>
+                    <li>CompTIA IT Operations Specialist</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="right_container">
+        <div class="Summary">
+            <div class="summary_head">
+                <h2>SUMMARY</h2>
+            </div>
+            <p>Has experience installing and managing client-home networks, 
+                such as- implementing routers, switches and access points from brands like Araknis and Pakedge. 
+                A certified technician that’s eager to learn and grow in networking and non-networking related skills, 
+                including- SQL, Python and cloud concepts</p>
+        </div>
+        <div class="projects">
+            <div class="projects_head">
+                <h2>PROJECTS</h2>
+            </div>
+            <div class="crc">
+                <h4>Cloud Resume Challenge</h4>
+            </div>
+            <ul>
+                <li>Created a static frontend using HTML, CSS, & Javascript, hosted the files using AWS S3, and served the files using AWS Route53 & CloudFront</li>
+                <br>
+                <li>Employed a serverless architecture using AWS Lambda, API Gateway, & DynamoDB as the backend to keep track of visitors and provide the count to the frontend via HTTP GET method</li>
+                <br>
+                <li>Defined the backend infrastucture using Terraform and deployed all frontend and backend assets with a CI/CD pipeline using GitHub Actions</li>
+            </ul>
+        </div>
+
+        <div class="work">
+            <div class="work_head">
+                <h2>WORK EXPERIENCE</h2>
+            </div>
+            <div class="launch">
+                <h4>Launch Systems - Irvine, CA </h4>
+            </div>
+            <div class="tech">
+                <h5>Technician (February 2021 - October 2021)</h5>
+            </div>
+            <ul>
+                <li>Worked with contractors and clients to architect and implement their home-automation and networking needs</li>
+                <br>
+                <li>Configured secure networks for homes and small-business</li>
+                <br>
+                <li>Installed networking equipment, Control4 equipment, security cameras, TVs, speakers, low-voltage wires and more</li>
+            </ul>
+            <div class="hockey">
+                <h4>The Rinks LLC - Anaheim, CA</h4>
+            </div>
+            <div class="anaheim">
+                <h5>Youth Hockey Coordinator/Hockey Coach (April 2018 - Present)</h5>
+            </div>
+            <ul>
+                <li>Coordinate leagues consisting of 60-100 participants</li>
+                <br>
+                <li>Effectively communicate with 100+ players and parents on a daily basis</li>
+                <br>
+                <li>Train new-hires and intigrate them into the organization's culture</li>
+            </ul>
+        </div>
+        <div class="education">
+            <div class="education_head">
+                <h2>EDUCATION</h2>
+            </div>
+            <div class="school">
+                <h4>Grand Canyon University, Online</h4>
+            </div>
+            <div class="year">
+                <h5>Business Administration (Fall 2019 - Fall 2022)</h5>
+            </div>
+        </div>
+            <span id="Visit_Count">
+
+    </div>
+</div>
+
+
+</body>
+</html>
